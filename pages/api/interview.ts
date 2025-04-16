@@ -18,6 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         console.log(`here is the question thanks${question}`)
     res.status(200).json({ meta_question: question });
   } catch (error) {
+    console.error('[Meta AI Error]', error);
     res.status(500).json({ error: 'Failed to generate question from Meta AI.' });
   }
 }

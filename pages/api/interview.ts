@@ -53,10 +53,11 @@ export default async function handler(
   }
 
   // Validate request body structure
-  if (!req.body || 
-      !req.body.tech?.value || 
-      !req.body.experience?.value || 
-      !req.body.level?.value) {
+  if (!req.body
+    //   !req.body.tech?.value || 
+    //   !req.body.experience?.value || 
+    //   !req.body.level?.value
+    ) {
     console.error('Invalid request body structure:', req.body);
     return res.status(400).json({ 
       error: 'Missing required fields or invalid structure. Expected format: { tech: { value: string }, experience: { value: string }, level: { value: string } }' 

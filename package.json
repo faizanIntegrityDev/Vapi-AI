@@ -12,6 +12,7 @@
     "@daily-co/daily-js": "^0.77.0",
     "@vapi-ai/web": "^2.2.5",
     "axios": "^1.8.4",
+    "framer-motion": "^12.7.3",
     "next": "15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

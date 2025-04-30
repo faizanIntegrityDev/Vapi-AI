@@ -38,7 +38,7 @@ export const askMetaAI = async (context: string): Promise<string> => {
     const response = await axios.post(
       'https://openrouter.ai/api/v1/chat/completions',
       {
-        model: 'openai/gpt-4', // or 'mistralai/mistral-7b-instruct', 'anthropic/claude-3-haiku', etc.
+        model: 'openai/gpt-4.1',
         messages: [
           {
             role: 'user',
@@ -50,6 +50,7 @@ export const askMetaAI = async (context: string): Promise<string> => {
         headers: {
           'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
           'Content-Type': 'application/json',
+          'X-Title': 'VAPI AI PROJECT',
         },
       }
     );
@@ -60,3 +61,4 @@ export const askMetaAI = async (context: string): Promise<string> => {
     return 'Sorry, something went wrong while contacting the AI.';
   }
 };
+
